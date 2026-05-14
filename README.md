@@ -18,22 +18,6 @@ Each stage has a suggested milestone window, but submissions can **roll flexibly
 
 **Why join:** You gain structured milestones, **embedded Online Bootcamp** sessions, **weekly office hours / Q&A**, and direct **RDK technical support** from the ecosystem team. You improve system design and on-device AI skills, earn **titles, badges, and awards**, and connect with the global **RDK developer community**.
 
----
-
-## Timeline
-
-| Stage | Window | Challenge Goal | Bootcamp / Program Offering |
-|-------|--------|----------------|-----------------------------|
-| **Sign Up** | **May 14 - June 10, 2026** | Complete registration, join the community, and get ready for the challenge kickoff. | Registration opens on **May 14**. |
-| **Stage 1 - Ignite Challenge** | **June 1 - June 10, 2026** | Go from your first time picking up an **RDK X5** to independently running your first on-device AI demo. | **June 2:** Kickoff webinar<br>**June 9:** Office hour / Q&A |
-| **Stage 2 - Build Challenge** | **June 11 - June 25, 2026** | Move from running demos to designing your own intelligent robot system, architecture, and project plan. | **June 16:** Themed webinar<br>**June 23:** Office hour / Q&A |
-| **Stage 3 - Launch Challenge** | **June 26 - July 15, 2026** | Bring your robot to life with an integrated, demonstrable project and **BPU-accelerated** real-time AI inference. | **June 30:** Show-and-tell webinar<br>**July 7:** Office hour / Q&A |
-| **Awards / Closing** | **July 23, 2026** | Celebrate completed projects and share standout work with the broader community. | **July 23:** Global livestream / closing |
-
-**Program note:** These dates define the suggested pacing for each stage, but the challenge supports flexible rolling progress. If you complete **Stage 1**, **Stage 2**, and **Stage 3** by **July 15, 2026**, you will be recognized as having completed the full program.
-
----
-
 ## How It Works (Three Stages)
 
 | Stage | Name | Focus | Details |
@@ -73,6 +57,20 @@ These are the essential onboarding steps for all participants before or during t
 **RDK quick reference (aligned with stage skills):** [docs/rdk-guide.md](./docs/rdk-guide.md)
 
 **FAQ:** [docs/faq.md](./docs/faq.md)
+
+---
+
+## Timeline
+
+| Stage | Window | Challenge Goal | Bootcamp / Program Offering |
+|-------|--------|----------------|-----------------------------|
+| **Sign Up** | **May 14 - June 10, 2026** | Complete registration, join the community, and get ready for the challenge kickoff. | Registration opens on **May 14**. |
+| **Stage 1 - Ignite Challenge** | **June 1 - June 10, 2026** | Go from your first time picking up an **RDK X5** to independently running your first on-device AI demo. | **June 2:** Kickoff webinar<br>**June 9:** Office hour / Q&A |
+| **Stage 2 - Build Challenge** | **June 11 - June 25, 2026** | Move from running demos to designing your own intelligent robot system, architecture, and project plan. | **June 16:** Themed webinar<br>**June 23:** Office hour / Q&A |
+| **Stage 3 - Launch Challenge** | **June 26 - July 15, 2026** | Bring your robot to life with an integrated, demonstrable project and **BPU-accelerated** real-time AI inference. | **June 30:** Show-and-tell webinar<br>**July 7:** Office hour / Q&A |
+| **Awards / Closing** | **July 23, 2026** | Celebrate completed projects and share standout work with the broader community. | **July 23:** Global livestream / closing |
+
+**Program note:** These dates define the suggested pacing for each stage, but the challenge supports flexible rolling progress. If you complete **Stage 1**, **Stage 2**, and **Stage 3** by **July 15, 2026**, you will be recognized as having completed the full program.
 
 ---
 
