@@ -2,7 +2,7 @@
 
 # **Robotics Dream Keeper Challenge**
 
-<img src="./assets/20260514-193706.png" alt="Robotics Dream Keeper Challenge Poster" width="720"/>
+<img src="./assets/poster.png" alt="Robotics Dream Keeper Challenge Poster" width="720"/>
 
 **Power on. Build. Launch your intelligent robot on RDK X5.**
 
