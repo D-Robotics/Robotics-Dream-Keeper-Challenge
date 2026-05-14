@@ -52,9 +52,9 @@ The **Robotics Dream Keeper Challenge** is a **staged, hands-on robotics program
 
 ## Honors & Awards
 
-- **Stage titles:** RDK Explorer → RDK Builder → RDK Creator (see stage files and [awards.md](./awards.md)).
-- **Community tiers:** Rookie → Builder → Creator → Core Developer (points, tasks, and perks).
-- **Special prizes:** Top Project, Top Contributor, Top Voice — rules and criteria in **[awards.md](./awards.md)**.
+- **Stage Titles:** **RDK Explorer** → **RDK Builder** → **RDK Creator** (see [awards.md](./awards.md)).
+- **RDK Advocate:** Rewards for cross-platform community sharing and engagement.
+- **Special Awards:** **TOP Voice Award** (Communication) and **TOP Creator Award** (Technical & Impact).
 
 ---
 
