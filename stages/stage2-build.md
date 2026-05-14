@@ -90,7 +90,7 @@ Tie your work to the official **stage competency table**. Stage 2 typically emph
 
 ## Completion Rewards
 
-- Title: **Robot Builder** *or* **AI Builder** (assigned per submission emphasis — criteria announced each season)  
+- Title: **RDK Builder**  
 - **Official project recommendations** shortlist eligibility  
 - **Office Hour** deep-dive slots  
 - **Creator Badge** and elevated **community role** (as announced)

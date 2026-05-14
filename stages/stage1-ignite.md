@@ -106,6 +106,6 @@ Submit **all** of the following (links must be **publicly accessible** unless or
 
 ## Completion Rewards
 
-- Title: **AI Explorer**  
+- Title: **RDK Explorer**  
 - Unlocks **Stage 2** eligibility  
 - **Bootcamp Badge** and **dedicated Discord role** (as announced for the season)

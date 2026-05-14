@@ -2,9 +2,7 @@
 
 # **Robotics Dream Keeper Challenge**
 
-<!-- <img src="./assets/poster.png" alt="Robotics Dream Keeper Challenge Poster" width="720"/>
-
-*Replace `assets/poster.png` and files under `assets/stage-banner/` with final hi-res campaign artwork when available.* -->
+<img src="./assets/20260514-193706.png" alt="Robotics Dream Keeper Challenge Poster" width="720"/>
 
 **Power on. Build. Launch your intelligent robot on RDK X5.**
 
@@ -16,6 +14,8 @@
 
 The **Robotics Dream Keeper Challenge** is a **staged, hands-on robotics program** built around real hardware and production-style delivery. Participants progress from first boot on **D-Robotics RDK X5** to a **complete, demo-ready AI / robotics project** with ROS 2 integration, accelerated inference, and community visibility.
 
+**Complete all 3 stages of submission by July 15 to finish the full program.**
+
 **Why join:** You gain structured milestones, **embedded Online Bootcamp** sessions, **weekly office hours / Q&A**, and direct **RDK technical support** from the ecosystem team. You improve system design and on-device AI skills, earn **titles, badges, and awards**, and connect with the global **RDK developer community**.
 
 ---
@@ -24,7 +24,7 @@ The **Robotics Dream Keeper Challenge** is a **staged, hands-on robotics program
 
 | Stage | Name | Focus | Details |
 |-------|------|--------|---------|
-| **Stage 1** | **Ignite Challenge** | From first contact with RDK X5 to running an on-board AI demo | [stages/stage1-ignite.md](./stages/stage1-ignite.md) |
+| **Stage 1** | **Ignite Challenge** | Move from first contact with RDK X5 to independently running an on-device AI task (flash → network → SSH → community → sensors → chosen AI task). | [stages/stage1-ignite.md](./stages/stage1-ignite.md) |
 | **Stage 2** | **Build Challenge** | From running demos to designing a full robot / AI system | [stages/stage2-build.md](./stages/stage2-build.md) |
 | **Stage 3** | **Launch Challenge** | End-to-end prototype: fusion, BPU-accelerated real-time AI, public demo | [stages/stage3-launch.md](./stages/stage3-launch.md) |
 
@@ -52,9 +52,18 @@ The **Robotics Dream Keeper Challenge** is a **staged, hands-on robotics program
 
 ## Honors & Awards
 
-- **Stage titles:** AI Explorer → Robot Builder / AI Builder → Robotics Dream Keeper (see stage files and [awards.md](./awards.md)).
+- **Stage titles:** RDK Explorer → RDK Builder → RDK Creator (see stage files and [awards.md](./awards.md)).
 - **Community tiers:** Rookie → Builder → Creator → Core Developer (points, tasks, and perks).
 - **Special prizes:** Top Project, Top Contributor, Top Voice — rules and criteria in **[awards.md](./awards.md)**.
+
+---
+
+## Hardware & Purchasing
+
+To participate in the challenge, you will need an **RDK X5** development board and relevant accessories.
+
+- **RDK X5 Purchase Link:** [RDK X5 Purchase Link](https://en.d-robotics.cc/distributor)
+- **Optional Accessory List:** [Accessory List](https://developer.d-robotics.cc/rdk_doc/en/Quick_start/accessory/)
 
 ---
 

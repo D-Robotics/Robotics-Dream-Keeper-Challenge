@@ -93,7 +93,7 @@ Submit the **full project bundle** checklist (organizers may automate verificati
 
 ## Completion Rewards
 
-- Title: **Robotics Dream Keeper**  
+- Title: **RDK Creator**  
 - **Global Top Creators** (seasonal ranking): additional prizes such as **Shenzhen innovation trip**, **official showcase**, **DGP incubation** consideration, **developer spotlight interview**, and **official collaboration** pathways — exact list per **season announcement**.
 
 ---

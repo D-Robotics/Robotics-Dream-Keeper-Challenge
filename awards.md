@@ -1,98 +1,77 @@
 # Awards, Titles & Recognition
 
-This document defines **special prizes**, **stage titles**, and **community identity tiers**. Seasonal dates and prize pools are announced on **Discord** and in the root [README.md](./README.md).
+This document defines the **stage-by-stage progression**, **advocacy rewards**, and **special honors** for the Robotics Dream Keeper Challenge.
 
 ---
 
-## Stage Titles (Progression)
+## 1. RDK Challenge Stage by Stage
 
-Titles are earned by **meeting all mandatory deliverables** for the stage, subject to **maintainer verification**.
+Participants earn specific titles and unlock rewards as they progress through the challenge milestones.
 
-| Title | How to earn | Unlocks |
-|--------|----------------|----------|
-| **AI Explorer** | Complete **Stage 1 — Ignite** per [stages/stage1-ignite.md](./stages/stage1-ignite.md) | Stage 2 entry, Bootcamp Badge, Discord role |
-| **Robot Builder** *or* **AI Builder** | Complete **Stage 2 — Build** per [stages/stage2-build.md](./stages/stage2-build.md) | Office Hour priority, Creator Badge, project spotlight eligibility |
-| **Robotics Dream Keeper** | Complete **Stage 3 — Launch** per [stages/stage3-launch.md](./stages/stage3-launch.md) | Top Creator ranking eligibility, showcase channels |
-
-**Robot Builder vs AI Builder (Stage 2):**  
-- **Robot Builder:** emphasis on **mechatronics**, navigation, manipulation, or motor-centric architecture.  
-- **AI Builder:** emphasis on **perception / speech / multi-model AI** with lighter mechanical scope.  
-If both are equally strong, organizers assign the title that best matches the **primary demo path**.
+| Stage | Title | How to Earn | Unlocks | Rewards |
+|:--- |:--- |:--- |:--- |:--- |
+| **Stage 0** | **Registered** | Sign up for RDK Challenge | Access to Discord & Bootcamp | Community exposure |
+| **Stage 1** | **RDK Explorer** | Complete Stage 1 per [stages/stage1-ignite.md](./stages/stage1-ignite.md) | Unlock Stage 2 & #RDK-Explorer Discord Role | **RDK Explorer Title**, Official channel exposure, **Exclusive Participant T-Shirt** |
+| **Stage 2** | **RDK Builder** | Complete Stage 2 per [stages/stage2-build.md](./stages/stage2-build.md) | Unlock Stage 3 & #RDK-Builder Discord Role | **RDK Builder Title**, Official channel exposure, **1-on-1 Online Technical Support** (1hr), Show & Tell Invitation |
+| **Stage 3** | **RDK Creator** | Complete Stage 3 per [stages/stage3-launch.md](./stages/stage3-launch.md) | Unlock #RDK-Creator Discord Role | **RDK Creator Title**, Official channel exposure, **150 USD Prize**, E-certificate, Physical Medal |
 
 ---
 
-## Community Identity Tiers (Growth System)
+## 2. RDK Advocate
 
-Independent of stage titles, participants accumulate **points and completed tasks** toward four tiers:
+**Rewards for Community Engagement:** During the 45-day program, users who publish content related to the challenge more than **8 times** on external channels (outside of D-Robotics) can apply for these rewards.
 
-| Tier | Typical criteria (indicative) |
-|------|-------------------------------|
-| **Rookie** | Registered, code of conduct accepted, intro post |
-| **Builder** | Stage 1 complete **or** equivalent points |
-| **Creator** | Stage 2 complete **or** high contribution score |
-| **Core Developer** | Stage 3 complete **plus** sustained community help (reviews, answers, approved tutorials) |
+**Content Requirements:**
+1. Explicitly mention keywords: **"D-Robotics"**, **"RDK"**, or **"RDK Challenge"**.
+2. Include at least one **Referral Link** to the official D-Robotics website or social accounts.
 
-**Exact point values** and **anti-abuse rules** are published each season. Tiers may grant **early info**, **extra Office Hour slots**, and **badge styling**.
+**Publication Formats (included but not limited to):**
+- Short Posts: LinkedIn, X (Twitter), Instagram, Facebook.
+- Videos: YouTube, TikTok.
+- Technical Blogs: Personal sites or public developer platforms.
+- Sharing: Technical community groups, school/university, or internal company/team sessions.
 
----
-
-## Special Awards (Three)
-
-### 1. Top Project Award
-
-**What it rewards:** The strongest **end-to-end** Stage 3 delivery — technical depth, polish, reproducibility, and real-world usefulness.
-
-**Selection criteria (weighted)**
-
-| Criterion | Weight (indicative) |
-|-----------|---------------------|
-| Technical completeness (AI + ROS 2 + actuation + fusion) | 30% |
-| BPU-accelerated real-time performance & benchmarks | 25% |
-| Documentation & reproducibility | 20% |
-| Demo clarity (video + live session) | 15% |
-| Innovation / novelty | 10% |
-
-**Prize examples (season-dependent):** hardware grant, spotlight article, invitation to **official showcase**.
+**Rewards:**
+- **Discord Role:** #RDK-Advocator.
+- **RDK Advocate Exclusive Merchandise Set:** 1x Mug, 1x Pair of Socks, 1x Mousepad, 1x Sticker.
 
 ---
 
-### 2. Top Contributor Award
+## 3. Special Awards
 
-**What it rewards:** Exceptional **community engineering** impact — helping others ship, not only personal progress.
+### 1：TOP Voice Award
+Selected from RDK Advocators (3 winners).
 
-**Selection criteria**
+**Selection Categories:**
+1. **Writer:** Highest blog quality, deep technical insights, suitable for official citation.
+2. **Producer:** Most exquisite video production, demonstrating excellent storytelling with RDK projects.
+3. **Influencer:** Highest total exposure and impressions across all platforms (based on analytics data).
 
-- Accepted **PRs** or **documented tutorials** merged to official or closely related ecosystem repos.  
-- High-quality **answers** in Discord (quantified by moderator logs).  
-- **Mentoring** pairs with verifiable outcomes (peer attestations + mod review).
+**Rewards:**
+- **500 USD Prize**.
+- **Top Voice E-certificate** and #TOP-Voice Discord identity.
+- **Global Live Stream:** Invitation to share your journey in an official global broadcast.
+- **Official Collaboration:** Priority recommendation for roles like **Global Evangelist** and other long-term cooperation.
 
-**Anti-gaming:** spam, copy-paste answers without resolution, or reputation farming are disqualifying.
+### 2: TOP Creator Award
+Selected from finishers who complete all stages (3 winners).
 
----
+**Selection Criteria:**
+1. **Delivery Completeness:** End-to-end integration and polish.
+2. **Technical Difficulty:** Depth of engineering and optimization.
+3. **Innovation:** Novelty of the concept or implementation.
+4. **Community Contribution:** Impact on helping others or providing resources.
+5. **Comprehensive Influence:** Overall impact on the ecosystem.
 
-### 3. Top Voice Award
-
-**What it rewards:** Outstanding **communication** — talks, threads, diagrams, or videos that grow the community.
-
-**Selection criteria**
-
-- Clear **explainers** that enable newcomers to pass Stage 1 faster.  
-- **Conference / meetup / livestream** appearances approved by organizers.  
-- **Responsible** messaging (accurate claims, safe robot practices).
-
----
-
-## Global Top Creator Package (Stage 3)
-
-Each season, a **small set** of **Robotics Dream Keeper** finishers is shortlisted for:
-
-- **Shenzhen innovation trip** (travel terms per season)  
-- **Official showcase** placement  
-- **DGP incubation** consideration  
-- **Global developer interview**  
-- **Official collaboration** pathways (content, hardware labs, or joint demos)
-
-**Selection:** composite of **Top Project** rubric + community signals + **jury** decision. **No purchase necessary.** Void where prohibited.
+**Rewards:**
+- **1,000 USD Prize**.
+- **Top Creator E-certificate** and #TOP-Creator Discord identity.
+- **Global Live Stream:** Invitation to share your project in an official global broadcast.
+- **Global Top Creator Package:**
+  - **Shenzhen Innovation Trip** (travel terms per season).
+  - **DGP Incubation** qualification.
+  - **Global Developer Interview** and feature spotlight.
+  - **Official Collaboration** opportunities for content, hardware, or joint demos.
 
 ---
 
