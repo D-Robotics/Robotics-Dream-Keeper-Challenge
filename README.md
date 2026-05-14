@@ -63,7 +63,7 @@ The **Robotics Dream Keeper Challenge** is a **staged, hands-on robotics program
 To participate in the challenge, you will need an **RDK X5** development board and relevant accessories.
 
 - **RDK X5 Purchase Link:** [RDK X5 Purchase Link](https://en.d-robotics.cc/distributor)
-- **Optional Accessory List:** [Accessory List](https://developer.d-robotics.cc/rdk_doc/en/Quick_start/accessory/)
+- **Optional Accessory List:** [Accessory List](https://d-robotics.github.io/rdk_doc/en/Quick_start/accessory)
 
 ---
 
