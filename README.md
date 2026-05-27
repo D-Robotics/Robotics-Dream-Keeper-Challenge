@@ -94,6 +94,8 @@ To participate in the challenge, you will need an **RDK X5** development board a
 
 ### RoboParty
 
+<img src="./assets/roboparty-logo.svg" alt="RoboParty logo" width="420"/>
+
 - **GitHub:** [github.com/Roboparty](https://github.com/Roboparty)
 - **Website:** [roboparty.com](https://roboparty.com/)
 

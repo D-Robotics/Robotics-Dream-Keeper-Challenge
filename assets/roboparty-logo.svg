@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
+  <title id="title">RoboParty logo</title>
+  <desc id="desc">Blue RoboParty wordmark with circular robot icon.</desc>
+  <rect width="1200" height="420" fill="#ffffff"/>
+  <g fill="#1747a6">
+    <path d="M206 31c58 0 110 24 146 62 35 37 56 88 56 144 0 61-25 117-66 157-40 39-95 63-155 63h-15c19-22 33-47 44-74l31-79-47 45c-13 13-34 13-47 0-13-13-13-34 0-47l91-88c13-13 32-20 50-20 48 0 86 39 86 86 0 9-1 17-4 26l-18 58c50-32 84-89 84-154 0-100-81-181-181-181-90 0-165 66-178 153H0C14 133 98 31 206 31z"/>
+    <rect x="74" y="274" width="63" height="26" rx="13" transform="rotate(-45 105.5 287)" />
+    <rect x="163" y="340" width="63" height="26" rx="13" transform="rotate(-45 194.5 353)" />
+  </g>
+  <g fill="none" stroke="#1747a6" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M471 88h122c35 0 64 28 64 63v6c0 21-11 41-29 52l46 86h-57l-39-75h-52v75h-55V88zm55 45v45h63c7 0 14-2 19-7 5-4 8-11 8-17v-2c0-11-9-19-21-19h-69z"/>
+    <path d="M708 88h191v45H763v39h125v43H763v37h136v45H708V88z"/>
+    <path d="M940 88h55v164h121v45H940V88z"/>
+    <path d="M471 331h55v59h70c12 0 21-9 21-20v-2c0-10-9-19-21-19H471v-18zm0 0h125c35 0 64 28 64 63v6c0 35-29 64-64 64H471V331z" transform="translate(0 -36)"/>
+    <path d="M708 295h55l95 169h-58l-19-35H684l-19 35h-58l101-169zm54 92-30-56-30 56h60z"/>
+    <path d="M890 295h122c35 0 64 28 64 63v6c0 21-11 41-29 52l46 86h-57l-39-75h-52v75h-55V295zm55 45v45h63c7 0 14-2 19-7 5-4 8-11 8-17v-2c0-11-9-19-21-19h-69z"/>
+    <path d="M1087 295h113v45h-29v124h-55V340h-29v-45z"/>
+  </g>
+</svg>
