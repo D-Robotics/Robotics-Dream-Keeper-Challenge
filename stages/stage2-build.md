@@ -10,7 +10,7 @@
 
 ## Core Objective
 
-Advance from **“I can run demos”** to **“I can design a robot / AI system”**: clear product thinking, architecture, ROS 2–aware decomposition, and an executable engineering plan.
+Advance from **“running demos”** to **designing your own intelligent robot system**: define your project concept, design the AI system architecture, and produce an executable engineering plan.
 
 ---
 

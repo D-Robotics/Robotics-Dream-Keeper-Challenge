@@ -3,14 +3,14 @@
 | Field | Value |
 |--------|--------|
 | **Suggested duration** | 10 days |
-| **Slogan** | Power On Your First AI Robot |
+| **Slogan** | Power On Your AI Robot's Brain |
 | **Hardware baseline** | D-Robotics **RDK X5** |
 
 ---
 
 ## Core Objective
 
-Move from **first contact with RDK X5** to **independently running an on-device AI demo** (flash → network → SSH → community → sensors → chosen AI task).
+Go from **first contact with RDK X5** to **independently running your first on-device AI task** (flash → network → SSH → community → sensors → chosen AI task).
 
 ---
 

@@ -10,7 +10,7 @@
 
 ## Core Objective
 
-Deliver a **working, demonstrable, shareable** AI / robotics demo: integrated stack, **BPU-accelerated** real-time perception, multi-task execution where applicable, and professional packaging (video, repo, docs, live walkthrough).
+Bring your robot to life with a **working, demonstrable, shareable** AI / robotics project: integrate the full system, deliver **BPU-accelerated** real-time inference, and package the result for public demonstration and sharing.
 
 ---
 

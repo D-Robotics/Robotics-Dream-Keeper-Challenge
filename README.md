@@ -22,7 +22,7 @@ Each stage has a suggested milestone window, but submissions can **roll flexibly
 
 | Stage | Name | Focus | Details |
 |-------|------|--------|---------|
-| **Stage 1** | **Ignite Challenge** | **Goal: Power On Your AI Robot's Brain.** Start from your first contact with **RDK X5** and learn to set up the board, activate sensors, and independently run your first AI demo. | [stages/stage1-ignite.md](./stages/stage1-ignite.md) |
+| **Stage 1** | **Ignite Challenge** | **Goal: Power On Your AI Robot's Brain.** Start from your first contact with **RDK X5** and learn to set up the board, activate sensors, and independently run your first on-device AI task. | [stages/stage1-ignite.md](./stages/stage1-ignite.md) |
 | **Stage 2** | **Build Challenge** | **Goal: Design Your Own Intelligent Robot.** Advance from “running demos” to defining your robot concept, designing the AI system architecture, and building a complete execution plan. | [stages/stage2-build.md](./stages/stage2-build.md) |
 | **Stage 3** | **Launch Challenge** | **Goal: Bring Your Robot to Life.** Integrate your full system into a functional, demonstrable, and shareable AI / robotics project with real-time inference and on-device acceleration. | [stages/stage3-launch.md](./stages/stage3-launch.md) |
 
@@ -65,9 +65,9 @@ These are the essential onboarding steps for all participants before or during t
 | Stage | Window | Challenge Goal | Bootcamp / Program Offering |
 |-------|--------|----------------|-----------------------------|
 | **Sign Up** | **May 14 - June 10, 2026** | Complete registration, join the community, and get ready for the challenge kickoff. | Registration opens on **May 14**. |
-| **Stage 1 - Ignite Challenge** | **June 1 - June 10, 2026** | Go from your first time picking up an **RDK X5** to independently running your first on-device AI demo. | **June 2:** Kickoff webinar<br>**June 9:** Office hour / Q&A |
-| **Stage 2 - Build Challenge** | **June 11 - June 25, 2026** | Move from running demos to designing your own intelligent robot system, architecture, and project plan. | **June 16:** Themed webinar<br>**June 23:** Office hour / Q&A |
-| **Stage 3 - Launch Challenge** | **June 26 - July 15, 2026** | Bring your robot to life with an integrated, demonstrable project and **BPU-accelerated** real-time AI inference. | **June 30:** Show-and-tell webinar<br>**July 7:** Office hour / Q&A |
+| **Stage 1 - Ignite Challenge** | **June 1 - June 10, 2026** | Go from your first time picking up an **RDK X5** to independently running your first on-device AI task. | **June 4:** Kickoff webinar<br>**June 11:** Office hour / Q&A |
+| **Stage 2 - Build Challenge** | **June 11 - June 25, 2026** | Move from running demos to designing your own intelligent robot system, architecture, and project plan. | **June 18:** Themed webinar<br>**June 25:** Office hour / Q&A |
+| **Stage 3 - Launch Challenge** | **June 26 - July 15, 2026** | Bring your robot to life with an integrated, demonstrable project and **BPU-accelerated** real-time AI inference. | **July 2:** Show-and-tell webinar<br>**July 9:** Office hour / Q&A |
 | **Awards / Closing** | **July 23, 2026** | Celebrate completed projects and share standout work with the broader community. | **July 23:** Global livestream / closing |
 
 **Program note:** These dates define the suggested pacing for each stage, but the challenge supports flexible rolling progress. If you complete **Stage 1**, **Stage 2**, and **Stage 3** by **July 15, 2026**, you will be recognized as having completed the full program.
@@ -87,6 +87,17 @@ To participate in the challenge, you will need an **RDK X5** development board a
 
 - **RDK X5 Purchase Link:** [RDK X5 Purchase Link](https://en.d-robotics.cc/distributor)
 - **Optional Accessory List:** [Accessory List](https://d-robotics.github.io/rdk_doc/en/Quick_start/accessory)
+
+---
+
+## Partners
+
+### RoboParty
+
+- **GitHub:** [github.com/Roboparty](https://github.com/Roboparty)
+- **Website:** [roboparty.com](https://roboparty.com/)
+
+RoboParty Robotics is a Shanghai-based humanoid robotics startup founded in 2025, pioneering full-stack open-source bipedal robots. Its flagship product, **ROBOTO Origin**, is a **1.2 m / 30 kg** humanoid robot capable of **3 m/s** running speed with a proprietary **AMP locomotion algorithm**. RoboParty is the first team to open-source a complete **"0-to-run"** humanoid baseline covering hardware design, control stack, training pipeline, and industry know-how, with the goal of reducing embodied AI development costs by **80%** and building collaborative robotics infrastructure for the industry.
 
 ---
 

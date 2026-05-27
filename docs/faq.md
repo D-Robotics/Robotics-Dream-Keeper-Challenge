@@ -64,10 +64,10 @@ git push
 
 ## Awards & Identity
 
-### How do I earn Builder / Creator / Core Developer tiers?
+### How do I earn RDK Explorer / RDK Builder / RDK Creator titles?
 
-- Tiers combine **points**, **completed tasks**, and **moderation standing** per season rules (see [awards.md](../awards.md)).  
-- Titles from stages (**AI Explorer**, etc.) are **separate** from community tier names where both exist.
+- Complete the corresponding challenge stage and submission requirements listed in the stage docs and [awards.md](../awards.md).  
+- Each title is tied directly to challenge completion: **Stage 1 → RDK Explorer**, **Stage 2 → RDK Builder**, **Stage 3 → RDK Creator**.
 
 ### When are prizes distributed?
 

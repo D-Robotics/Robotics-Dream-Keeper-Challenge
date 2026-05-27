@@ -10,7 +10,7 @@ Participants earn specific titles and unlock rewards as they progress through th
 
 | Stage | Title | How to Earn | Unlocks | Rewards |
 |:--- |:--- |:--- |:--- |:--- |
-| **Stage 0** | **Registered** | Sign up for RDK Challenge | Access to Discord & Bootcamp | Community exposure |
+| **Stage 0** | **Signed up for RDK Challenge** | Complete the registration checklist: submit the application form, post your introduction in the official Discord challenge channel, and activate your RDK Studio account. | Unlock Stage 1, access to Discord & Bootcamp | Official participant list and community exposure |
 | **Stage 1** | **RDK Explorer** | Complete Stage 1 per [stages/stage1-ignite.md](./stages/stage1-ignite.md) | Unlock Stage 2 & #RDK-Explorer Discord Role | **RDK Explorer Title**, Official channel exposure, **Exclusive Participant T-Shirt** |
 | **Stage 2** | **RDK Builder** | Complete Stage 2 per [stages/stage2-build.md](./stages/stage2-build.md) | Unlock Stage 3 & #RDK-Builder Discord Role | **RDK Builder Title**, Official channel exposure, **1-on-1 Online Technical Support** (1hr), Show & Tell Invitation |
 | **Stage 3** | **RDK Creator** | Complete Stage 3 per [stages/stage3-launch.md](./stages/stage3-launch.md) | Unlock #RDK-Creator Discord Role | **RDK Creator Title**, Official channel exposure, **150 USD Prize**, E-certificate, Physical Medal |
