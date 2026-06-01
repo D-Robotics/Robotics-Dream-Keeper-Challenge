@@ -44,6 +44,14 @@ First, complete the registration stage to officially join the challenge and unlo
 
 These are the essential onboarding steps for all participants before or during the early challenge window.
 
+### Exclusive Registration Benefits
+
+1. **Free 1‑month Construct ROS Course License**
+   Once you finish all 3 registration steps above, you will receive a 1‑month free learning license for ROS and robotics courses from The Construct Robotics Institute — a top e‑learning platform that provides comprehensive, hands-on ROS training to help you build professional robotics skills. Learn more: https://www.theconstruct.ai/
+
+2. **Lucky Draw: D-Robotics Stereo Camera**
+   We will randomly select 3 lucky registered participants to win a D-Robotics Stereo Camera as an exclusive community giveaway.
+
 ---
 
 ## How to Participate
@@ -74,6 +82,28 @@ These are the essential onboarding steps for all participants before or during t
 
 ---
 
+## RDK Weekly Webinar
+
+To help you get started smoothly, master practical robotics development skills and explore the full potential of RDK X5, we are hosting a weekly online webinar series.
+
+We have invited senior makers and industry experts from the global robotics community to share professional knowledge, hands-on development tips and real-world project experience. Whether you are new to edge AI and robotics or looking to polish your skills, these live sessions will bring you valuable takeaways.
+
+The sessions will take place every **Thursday from June 4 to July 9**.
+
+**Event Base Time: 14:30 GMT, Thursday**
+
+- Beijing: 22:30 (GMT+8)
+- Tokyo: 23:30 (GMT+9)
+- New Delhi: 20:00 (GMT+5:30)
+- London (BST): 15:30
+- Berlin / Paris (CEST): 16:30
+- New York (EDT): 10:30
+- Los Angeles (PDT): 07:30
+
+Register for the webinar on Luma now: https://luma.com/sv23befx
+
+---
+
 ## Honors & Awards
 
 - **Stage Titles:** **RDK Explorer** → **RDK Builder** → **RDK Creator** (see [awards.md](./awards.md)).
@@ -100,6 +130,14 @@ To participate in the challenge, you will need an **RDK X5** development board a
 - **Website:** [roboparty.com](https://roboparty.com/)
 
 RoboParty Robotics is a Shanghai-based humanoid robotics startup founded in 2025, pioneering full-stack open-source bipedal robots. Its flagship product, **ROBOTO Origin**, is a **1.2 m / 30 kg** humanoid robot capable of **3 m/s** running speed with a proprietary **AMP locomotion algorithm**. RoboParty is the first team to open-source a complete **"0-to-run"** humanoid baseline covering hardware design, control stack, training pipeline, and industry know-how, with the goal of reducing embodied AI development costs by **80%** and building collaborative robotics infrastructure for the industry.
+
+### The Construct Robotics Institute
+
+To help everyone build a solid foundation in robotics development, the Robotics Dream Keeper Challenge has partnered exclusively with The Construct Robotics Institute. As a leading e‑learning platform for ROS and robotics education, it provides learners with a comprehensive curriculum and hands‑on courses to sharpen professional robotics skills.
+
+Learn more: https://www.theconstruct.ai/
+
+Sign up for the challenge now to unlock a **FREE 1‑month learning license**!
 
 ---
 
