@@ -47,7 +47,10 @@ These are the essential onboarding steps for all participants before or during t
 ### Exclusive Registration Benefits
 
 1. **Free 1‑month Construct ROS Course License**
+
    Once you finish all 3 registration steps above, you will receive a 1‑month free learning license for ROS and robotics courses from The Construct Robotics Institute — a top e‑learning platform that provides comprehensive, hands-on ROS training to help you build professional robotics skills. Learn more: https://www.theconstruct.ai/
+
+     <img src="./assets/Registration Benefit.jpg" alt="Registration Benefit" width="420"/>
 
 2. **Lucky Draw: D-Robotics Stereo Camera**
    We will randomly select 3 lucky registered participants to win a D-Robotics Stereo Camera as an exclusive community giveaway.
