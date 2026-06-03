@@ -133,6 +133,8 @@ RoboParty Robotics is a Shanghai-based humanoid robotics startup founded in 2025
 
 ### The Construct Robotics Institute
 
+<img src="./assets/The-Construct-ROBOTICS-INSTITUTE-logo.png" alt="The Construct Robotics Institute logo" width="420"/>
+
 To help everyone build a solid foundation in robotics development, the Robotics Dream Keeper Challenge has partnered exclusively with The Construct Robotics Institute. As a leading e‑learning platform for ROS and robotics education, it provides learners with a comprehensive curriculum and hands‑on courses to sharpen professional robotics skills.
 
 Learn more: https://www.theconstruct.ai/
