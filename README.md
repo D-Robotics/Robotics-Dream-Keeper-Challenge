@@ -40,7 +40,7 @@ First, complete the registration stage to officially join the challenge and unlo
 
 1. **Join our Discord server:** https://discord.gg/ydVxBpz3vP
 2. **Submit the application form:** https://forms.gle/ojG5pRmWXMsM27Vb9
-3. **Register for RDK Studio:** https://sso.d-robotics.cc/
+3. **Install RDK Studio and Register**:https://developer.d-robotics.cc/en/rdkstudio
 
 These are the essential onboarding steps for all participants before or during the early challenge window.
 
