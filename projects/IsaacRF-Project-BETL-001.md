@@ -3,7 +3,6 @@
 - **Participant:** IsaacRF
 - **Stage completed:** 1
 - **Repository:** https://github.com/RFisaac/BETL-001
-- **Demo video:** *Stage 1 recap video in production — link will be added to this PR within a few days.*
 - **Community post:** https://discord.com/channels/1300358874280230994/1509220927462969575/1514489192158330931
 
 ## Summary
