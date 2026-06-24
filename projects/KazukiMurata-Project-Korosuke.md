@@ -37,6 +37,7 @@ community.
 ## Links & Evidence
 
 - Stage 1 write-up (commands + dependencies): https://github.com/gurimaruking/corosuke-robot/blob/main/STAGE1.md
+- Screenshot A — RDK Studio connected to the board (SSH connected, live remote desktop): https://github.com/gurimaruking/corosuke-robot/blob/main/docs/stage1_evidence/A_flash_ssh.png
 - Screenshot B — camera preview: https://github.com/gurimaruking/corosuke-robot/blob/main/docs/stage1_evidence/B_camera_preview.jpg
 - Screenshot C — live YOLO11 detection on-device: https://github.com/gurimaruking/corosuke-robot/blob/main/docs/stage1_evidence/C_yolo_live_detection.jpg
 - Live demo (GIF): https://github.com/gurimaruking/corosuke-robot/blob/main/docs/stage1_evidence/D_yolo_live_demo.gif
