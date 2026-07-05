@@ -1,9 +1,11 @@
 # Korosuke (コロ助) — Animatronic AI Robot
 
 - **Participant:** Kazuki Murata
-- **Stage completed:** 1
+- **Stage completed:** 2
 - **Repository:** https://github.com/gurimaruking/corosuke-robot
-- **Demo video:** (screenshots below; live demo video to follow)
+- **Design proposal (Stage 2):** https://github.com/gurimaruking/corosuke-robot/blob/main/PROPOSAL.md
+- **Roadmap:** https://github.com/gurimaruking/corosuke-robot/blob/main/ROADMAP.md
+- **Demo video:** (Stage 1 screenshots below; Stage 3 live demo video to follow)
 - **Community post:** https://discord.com/channels/1300358874280230994/1508433443648700516
 
 ## Summary
@@ -33,6 +35,18 @@ community.
 - **Thermals:** 5 V 40 mm fan off the 40-pin header (pin 4/6) → idle 66 °C → ~45–49 °C, validated by `hrut_somstatus`.
 - **Open-source byproduct:** [rdk-x5-modular-case](https://github.com/gurimaruking/rdk-x5-modular-case) — first community 3D-printable RDK X5 case, CC BY 4.0.
 - **Next (Stage 2+):** GC9A01 eye displays reacting to detections, "…nari" LLM voice, bipedal QDD-motor motion.
+
+## Stage 2 — Build (System Design)
+
+For Stage 2 I turned the proven Stage-1 brain into a full **intelligent-robot design**.
+The complete proposal is in [PROPOSAL.md](https://github.com/gurimaruking/corosuke-robot/blob/main/PROPOSAL.md); highlights:
+
+- **Concept & measurable goals** — Korosuke *sees → turns → greets → emotes → gestures*, all on-device. Acceptance criteria are quantified (e.g. G1: ≥10 FPS on BPU, detection→action <150 ms; G3: wake→speech <3.0 s), grounded in Stage-1 measurements.
+- **AI architecture** — a **ROS 2 graph** with the RDK X5 as the single cognitive core: `vision_node` (BPU YOLO11 + face) → `ai_brain_node` → `dialogue_node` (LLM + "…nari" persona) → `voice_node` (VOICEVOX + lipsync) / `expression_node` (eyes+mouth) / `motion_node`, bridged over UART to ESP32 sub-controllers. Includes system flow + node-graph Mermaid diagrams and a **BPU/CPU-core compute-allocation table**.
+- **The key pivot** — the pre-challenge design (3× ESP32 + a home server doing the AI) is re-wired so the RDK X5 owns cognition and the ESP32s become dumb real-time actuator drivers. This is *re-wiring, not re-inventing* — most subsystems already exist.
+- **Engineering plan** — [BOM](https://github.com/gurimaruking/corosuke-robot/blob/main/docs/bom.md), ROS 2 workspace layout, a week-by-week [ROADMAP.md](https://github.com/gurimaruking/corosuke-robot/blob/main/ROADMAP.md) through the 7/15 demo, and a top-8 **risk table** with mitigations and pivot triggers (bipedal locomotion is explicitly a decoupled stretch, never on the MVP critical path).
+
+Progress already banked toward Stage 3: the full body has been **redesigned for color-split 3D printing**, and the **eye coprocessor is alive** — 2× GC9A01 round LCDs driven by an ESP32-S3 (LovyanGFX) with emotion/gaze/blink commands over UART.
 
 ## Links & Evidence
 
