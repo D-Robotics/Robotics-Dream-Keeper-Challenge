@@ -28,16 +28,21 @@ Currently the dashboard supports live streaming and joystick teleop, with YOLO c
 
 **Screenshot A — Board bring-up (flash + SSH):**
 
+Flashed the RDK X5 with a supported OS image via RDK Studio, connected it to the network, and opened a remote SSH session from my laptop to confirm shell access to the board.
+
 ![RDK X5 SSH session](./RDK_SSH.png)
 
 **Screenshot B — Sensor / actuator activity (camera):**
+
+Brought up the LeTMC-520 RGBD camera (Orbbec Astra Pro clone) on the RDK X5 using `ros2_astra_camera`, and verified a live camera feed confirming the capture pipeline feeding into the detection and VLM matching nodes.
 
 ![Camera feed](./camera.png)
 
 **Screenshot C — AI task running on board (YOLO detection):**
 
-![YOLO detection output](./yolo.png)
+Ran YOLO object detection on-device on the RDK X5 using a reference implementation from `rdk_model_zoo`, with bounding boxes drawn over detected persons in real time as the first stage of the suspect-matching pipeline.
 
+![YOLO detection output](./yolo.png)
 
 
 ---
