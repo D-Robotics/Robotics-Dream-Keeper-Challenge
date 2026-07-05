@@ -1,10 +1,9 @@
 # VLM Police Patrol
 
 - **Participant:** Brian
-- **Stage completed:** <1 | 2 | 3>  <!-- fill in your current stage -->
+- **Stage completed:** <1>  <!-- fill in your current stage -->
 - **Repository:** <https://github.com/zimbot97/VLM-Police-Patrol>
-- **Demo video:** <https://...>  <!-- add your demo link -->
-- **Community post:** <https://...>  <!-- optional -->
+
 
 ## Summary
 
@@ -39,7 +38,7 @@ Currently the dashboard supports live streaming and joystick teleop, with YOLO c
 
 ![YOLO detection output](./yolo.png)
 
-- Benchmarks: <...>
+
 
 ---
 
