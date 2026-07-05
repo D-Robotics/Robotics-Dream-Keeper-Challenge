@@ -6,7 +6,7 @@
 - **Design proposal (Stage 2):** https://github.com/gurimaruking/corosuke-robot/blob/main/PROPOSAL.md
 - **Roadmap:** https://github.com/gurimaruking/corosuke-robot/blob/main/ROADMAP.md
 - **Demo video:** (Stage 1 screenshots below; Stage 3 live demo video to follow)
-- **Community post:** https://discord.com/channels/1300358874280230994/1508433443648700516
+- **Community post (Stage 2):** https://discord.com/channels/1300358874280230994/1508433443648700516/1523261786034540704
 
 ## Summary
 
