@@ -1,7 +1,7 @@
 # VLM Police Patrol — Stage 2 Proposal (SLAM Edition)
 
 - **Participant:** Brian
-- **Stage completed:** <2> 
+- **Stage completed:** 2 
 - **Repository:** <https://github.com/zimbot97/VLM-Police-Patrol>
 
 ---
