@@ -17,7 +17,7 @@ Indoor / semi-indoor patrol environments (office corridors, lobbies, warehouse a
 | Metric | Target |
 |---|---|
 | Person detection (YOLO on BPU) | ≥ 15 FPS end-to-end |
-| VLM match cycle (SmolVLM2-256M, full attribute extraction + compare) | ~30 s per query overall |
+| VLM match cycle (InternVL2.5-1B, full attribute extraction + compare) | ~30 s per query overall |
 | Dashboard video latency (MJPEG over LAN) | ≤ 500 ms |
 | Teleop command latency (joystick → cmd_vel) | ≤ 200 ms |
 | Continuous runtime on one battery charge | ≥ 45 min |
@@ -32,7 +32,7 @@ Security personnel / patrol operators. Primary interaction is the **`dashboard_f
 ### Core AI Capabilities
 
 - **Perception:** LeTMC-520 RGBD camera → YOLO person detection on the RDK X5 BPU. The depth stream serves double duty: converted to a synthetic laser scan (`depthimage_to_laserscan`) for 2D SLAM, and sampled at the detection bbox center for suspect range estimation.
-- **Decision:** `suspect_matcher` — a gated VLM pipeline. YOLO runs continuously; person crops are periodically forwarded to an on-device VLM (SmolVLM2-256M via `hobot_llamacpp`, SigLIP vision encoder on BPU + GGUF LLM on CPU). The VLM extracts structured appearance attributes (clothing color/type, hairstyle) per image, and a programmatic comparator decides match / no-match against the reference. A full match cycle takes **~30 s overall** on-device, which is precisely why detection is gated: YOLO runs continuously in real time while the slow VLM is invoked only on throttled crops, keeping the system responsive.
+- **Decision:** `suspect_matcher` — a gated VLM pipeline. YOLO runs continuously; person crops are periodically forwarded to an on-device VLM (InternVL2.5-1B via `hobot_llamacpp`, InternViT vision encoder on BPU + GGUF LLM on CPU). The VLM extracts structured appearance attributes (clothing color/type, hairstyle) per image, and a programmatic comparator decides match / no-match against the reference. A full match cycle takes **~30 s overall** on-device, which is precisely why detection is gated: YOLO runs continuously in real time while the slow VLM is invoked only on throttled crops, keeping the system responsive.
 - **Localization:** Two phases. **Mapping:** `slam_gmapping` builds a 2D occupancy map, which is saved with `map_server`. **Patrol:** the saved map is reloaded and **AMCL** (adaptive Monte-Carlo localization) provides the `map→odom` correction, localizing the robot against the known map. Both consume the synthetic laser scan and odometry; the odometry itself is wheel encoders fused with an **MPU-9250 9-axis IMU** on the RP2040 (accel + gyro + mag) for drift-corrected heading — important because mecanum strafing is prone to wheel slip. AMCL's pose estimate is what `suspect_locator` uses to place suspect markers in the map frame during patrol.
 - **Actuation:** Holonomic mecanum base. RDK X5 publishes `cmd_vel`; an RP2040 microcontroller runs a **micro-ROS** node (`base_bridge`) that performs closed-loop PID wheel speed control, subscribes to `/cmd_vel`, and publishes wheel odometry directly as ROS 2 topics over the ESP8285 transport — fused with the MPU-9250 IMU for SLAM.
 
@@ -62,7 +62,7 @@ flowchart TD
         DRV[ros2_astra_camera<br/>driver node]
         YOLO[YOLO person detector<br/>BPU, rdk_model_zoo]
         GATE[Crop gate<br/>throttle crops per target]
-        VLM[hobot_llamacpp VLM<br/>SigLIP on BPU + GGUF LLM on CPU]
+        VLM[hobot_llamacpp VLM<br/>InternViT on BPU + GGUF LLM on CPU]
         CMP[suspect_matcher<br/>attribute comparator]
         D2L[depthimage_to_laserscan]
         SLAM[slam_gmapping<br/>build 2D map - mapping phase]
@@ -128,8 +128,8 @@ flowchart TD
 | Workload | Unit | Expected utilisation |
 |---|---|---|
 | YOLO person detection | **BPU** | Continuous; ~15–30 FPS budget |
-| SigLIP vision encoder (VLM vision tower) | **BPU** | Burst, on gated queries only |
-| GGUF LLM backbone (SmolVLM2-256M) | **CPU** (4–6 cores during decode) | Burst; contributes to the ~30 s end-to-end match cycle, otherwise idle |
+| InternViT vision encoder (VLM vision tower) | **BPU** | Burst, on gated queries only |
+| GGUF LLM backbone (InternVL2.5-1B) | **CPU** (4–6 cores during decode) | Burst; contributes to the ~30 s end-to-end match cycle, otherwise idle |
 | `ros2_astra_camera` + image transport | CPU | ~10–20% of one core |
 | `dashboard_flask` (MJPEG encode + SocketIO) | CPU | ~20–40% of one core |
 | `slam_gmapping` (mapping only) | CPU | ~20–35% of one core (particle filter) |
@@ -141,7 +141,7 @@ flowchart TD
 | `oled_status` display (SSD1306 I2C) | CPU | negligible |
 | Host offload | none | All inference on-device |
 
-**Memory note:** ION pool configured ≥ 512 MB (`srpi-config`) to hold the VLM vision tower; SmolVLM2-256M chosen over InternVL2.5-1B as primary model for headroom.
+**Memory note:** ION pool configured ≥ 512 MB (`srpi-config`) to hold InternVL2.5-1B's ~431 MB vision encoder — the default 320 MB carveout is insufficient. Cold model loads are slow (observed ~312–651 s), so the node signals a deterministic ready-event before accepting queries.
 
 ### 2.4 ROS 2 Node Graph
 
@@ -230,7 +230,7 @@ The URDF is loaded via `robot_state_publisher` (with the `ParameterValue(Command
 
 ### 3.2 Timeline / Roadmap
 
-Stage 1 (Ignite) was submitted **5 July**. This Stage 2 proposal is submitted **9 July**. Stage 3 (final build + demo) will be submitted **before 15 July**, giving a tight ~6-day execution window in which the hardware and software integration below runs largely in parallel.
+Stage 1 (Ignite) was submitted **5 July**. This Stage 2 proposal is submitted **8 July**. Stage 3 (final build + demo) will be submitted **before 15 July**, giving a tight ~6-day execution window in which the hardware and software integration below runs largely in parallel.
 
 | Date | Stage | Milestone |
 |---|---|---|
@@ -247,7 +247,7 @@ Stage 1 (Ignite) was submitted **5 July**. This Stage 2 proposal is submitted **
 
 | # | Risk | Trigger (when to pivot) | Mitigation |
 |---|---|---|---|
-| 1 | VLM latency too high for useful patrol alerts | Match cycle exceeds ~30 s after tuning | Keep SmolVLM2-256M as primary (not InternVL2.5-1B); reduce crop resolution; shorten prompts; cache reference attributes once (compare live crops against cached reference, ~1 inference per query) |
+| 1 | VLM latency too high for useful patrol alerts | Match cycle exceeds ~30 s after tuning | Reduce crop resolution; shorten prompts; cache reference attributes once (compare live crops against cached reference, ~1 inference per query); fall back to a smaller VLM (e.g. SmolVLM2-256M) if InternVL2.5-1B can't hit the target |
 | 2 | ION / memory exhaustion when detector + VLM co-run | Allocation failures reappear during integration | ION pool ≥ 512 MB preset; stagger model loads; fall back to sequential (pause detector during VLM decode) |
 | 3 | Motor driver hardware fault (previously seen on a WHEELTEC D24A: 3.3 V rail failure from shorted TVS diode) | Any encoder rail reading < 3 V | Feed encoder VCC from Pico 3.3 V rail; keep a spare TB6612 4-channel board |
 | 4 | Wi-Fi teleop dropouts cause runaway robot | Any uncommanded motion during W2 tests | 300 ms `cmd_vel` timeout on RP2040 → zero velocity; RC spike filter (N=3 consecutive samples) |
@@ -259,12 +259,7 @@ Stage 1 (Ignite) was submitted **5 July**. This Stage 2 proposal is submitted **
 
 ```
 VLM-Police-Patrol/
-├── PROPOSAL.md              # this document (Stage 2 entry doc)
-├── ROADMAP.md               # milestone table mirrored from §3.2
 ├── README.md
-├── docs/
-│   ├── images/              # architecture diagrams, screenshots
-│   └── benchmarks.md
 ├── src/
 │   ├── suspect_matcher/     # ament_python: VLM matching pipeline
 │   ├── dashboard_flask/     # ament_python: web dashboard (map + markers)
