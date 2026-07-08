@@ -1,8 +1,8 @@
 # VLM Police Patrol — Stage 2 Proposal (SLAM Edition)
 
-> **Participant:** Brian
-> **Stage completed:** <1> 
-> **Repository:** <https://github.com/zimbot97/VLM-Police-Patrol>
+- **Participant:** Brian
+- **Stage completed:** <2> 
+- **Repository:** <https://github.com/zimbot97/VLM-Police-Patrol>
 
 ---
 
@@ -236,8 +236,8 @@ Stage 1 (Ignite) was submitted **5 July**. This Stage 2 proposal is submitted **
 |---|---|---|
 | **Jul 5** | Stage 1 ✅ | Board bring-up submitted: RDK X5 flash + SSH, LeTMC-520 via `ros2_astra_camera`, YOLO on-device via `rdk_model_zoo`. |
 | **Jul 6–8** | Stage 2 prep | Chassis assembled; motors + encoders wired to RP2040 + TB6612 4-ch driver; micro-ROS `base_bridge` (PID + mecanum mixing) bench-tested; MPU-9250 wired on I2C. |
-| **Jul 9** | Stage 2 ✅ | This proposal (concept, architecture, engineering plan) submitted via PR. |
-| **Jul 10–11** | Stage 3 build | `base_bridge` micro-ROS over ESP8285 on the live graph (`/cmd_vel`, `/odom`, `/imu`); IMU fused into odometry; dashboard joystick drives the base; URDF + `robot_state_publisher` TF tree in RViz2. |
+| **Jul 8** | Stage 2 ✅ | This proposal (concept, architecture, engineering plan) submitted via PR. |
+| **Jul 9–11** | Stage 3 build | `base_bridge` micro-ROS over ESP8285 on the live graph (`/cmd_vel`, `/odom`, `/imu`); IMU fused into odometry; dashboard joystick drives the base; URDF + `robot_state_publisher` TF tree in RViz2. |
 | **Jul 12** | Stage 3 build | Camera extrinsics calibrated; `depthimage_to_laserscan` + `slam_gmapping` build the patrol map, saved via `map_server`; **AMCL** localizing on the saved map; map + pose rendered in dashboard; OLED status display up. |
 | **Jul 13** | Stage 3 build | YOLO → crop gate → VLM pipeline on the moving robot; `suspect_locator` projecting matches into the map frame; suspect markers + alerts in dashboard. |
 | **Jul 14** | Stage 3 polish | Accuracy + marker-position tuning; battery runtime test; failure hardening; demo scenario rehearsal, video recording, benchmark tables. |
