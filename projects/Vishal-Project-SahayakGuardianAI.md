@@ -45,4 +45,7 @@ Full benchmark: [docs/BENCHMARKS.md](https://github.com/vishal7439/sahayak-guard
 
 ## Implemented features
 
+## Agreement
+
+   I agree that this showcase document may be used by the Robotics Dream Keeper Challenge organizers as described in the official README (promotion, judging, and archives).
 Manual drive · live camera · ultrasonic + DHT22 sensors · offline speech (Piper) · BPU object detection · Guard / Patrol / Follow modes · voice object-search · room check · universal voice command (Whisper + Gemma router) · online scene description and find-anything (Gemini) · firmware safety watchdog · auto-start on boot · live detection panel with confidence bars.
