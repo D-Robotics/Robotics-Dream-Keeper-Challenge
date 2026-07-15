@@ -1,4 +1,4 @@
-# RDK X5 Smart Household Inventory Robot
+# TuntunClaw RDK X5
 
 - **Participant:** Kewei Chen
 - **Stage completed:** 3 (final media link pending)
@@ -8,7 +8,18 @@
 
 ## Summary
 
-This project designs an RDK X5-powered smart household inventory assistant with a real robotic arm. The target scenario is smart life robotics: the system will perceive household supplies, maintain inventory records, generate low-stock reminders, and later trigger robotic arm actions for simple item interaction, sorting, or demonstration tasks.
+TuntunClaw RDK X5 is a memory-aware household inventory and manipulation
+assistant designed around RDK X5, OpenClaw, and a real robotic arm. The system
+perceives household supplies, maintains quantity and location memory, generates
+low-stock reminders, and coordinates safe manipulation tasks.
+
+The completed TuntunClaw MuJoCo prototype demonstrates natural-language task
+dispatch, VLM + SAM target segmentation, GraspNet grasp-pose inference,
+continuous pick-and-place tasks without scene reset, persistent scene state,
+and inventory updates. The challenge implementation adds the physical Magic
+Box camera, microphone, speaker, RDK X5 BPU perception, and ROS 2 inventory
+state. Real-arm execution is only claimed when visibly demonstrated in the
+final video.
 
 The completed prototype runs a live MIPI-camera YOLO model on the RDK X5 BPU, a CPU microphone activity node, and a ROS 2 inventory tracker. The tracker combines detection and audio activity using ROS receive-time alignment, publishes `/inventory/state`, and persists an atomic JSON snapshot once per second.
 
@@ -29,6 +40,9 @@ The live benchmark contains 644 consecutive samples. The `yolo26s_bayese_640x640
 - Sustained-run temperatures: CPU 58.0 C and DDR 59.4 C.
 
 ## Links & Evidence
+
+- TuntunClaw source and tutorial: https://github.com/datawhalechina/every-embodied/tree/main/16-%E4%B8%93%E9%A2%98%E7%BB%84%E9%98%9F%E5%AD%A6%E4%B9%A0/02-OpenClaw%E5%AE%B6%E5%BA%AD%E7%89%A9%E8%B5%84%E5%8A%A9%E6%89%8B/tuntunclaw
+- Completed MuJoCo simulation demo: https://www.bilibili.com/video/BV1roAVzaEeZ
 
 - Stage 1 submission package: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/docs/STAGE1_SUBMISSION.md
 - Desktop screenshot: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/assets/stage1_rdk_desktop.png
