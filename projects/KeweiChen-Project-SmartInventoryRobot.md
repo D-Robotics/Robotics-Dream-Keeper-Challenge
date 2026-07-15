@@ -1,9 +1,9 @@
 # TuntunClaw RDK X5
 
 - **Participant:** Kewei Chen
-- **Stage completed:** 3 (final media link pending)
+- **Stage completed:** 3
 - **Repository:** https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot
-- **Demo video:** Pending final 3-7 minute upload
+- **Demo video:** https://youtu.be/0V7vHJeHVjs
 - **Community post:** https://discord.com/channels/1300358874280230994/1503706103752429618/threads/1506248828523905105
 
 ## Summary
@@ -18,12 +18,18 @@ dispatch, VLM + SAM target segmentation, GraspNet grasp-pose inference,
 continuous pick-and-place tasks without scene reset, persistent scene state,
 and inventory updates. The challenge implementation adds the physical Magic
 Box camera, microphone, speaker, RDK X5 BPU perception, and ROS 2 inventory
-state. Real-arm execution is only claimed when visibly demonstrated in the
-final video.
+state, tablet feedback, and a real robotic arm. The final video visibly
+demonstrates the completed physical inventory task.
 
 The completed prototype runs a live MIPI-camera YOLO model on the RDK X5 BPU, a CPU microphone activity node, and a ROS 2 inventory tracker. The tracker combines detection and audio activity using ROS receive-time alignment, publishes `/inventory/state`, and persists an atomic JSON snapshot once per second.
 
 The live benchmark contains 644 consecutive samples. The `yolo26s_bayese_640x640_nv12` model averages 30.02 smart FPS, 24.61 ms BPU inference latency, and 72.27 ms end-to-end pipeline latency at 960 x 544. The start and stop scripts were both verified on the physical board.
+
+In the real-world experiment, the robot retrieves one Oreo cookie and one
+Nestle coffee stick. Oreo inventory changes from 5 to 4 and remains above its
+threshold of 2, so no warning is emitted. Coffee inventory changes from 7 to 6
+and reaches its threshold of 6, causing the tablet to show low stock and the
+Magic Box to announce a replenishment warning.
 
 ## Technical Highlights
 
@@ -38,8 +44,14 @@ The live benchmark contains 644 consecutive samples. The `yolo26s_bayese_640x640
 - Fused inventory state publishes `/inventory/state` and persists to JSON.
 - Reproducible start and PID-scoped safe shutdown scripts verified on the board.
 - Sustained-run temperatures: CPU 58.0 C and DDR 59.4 C.
+- Physical arm retrieval with synchronized tablet inventory feedback and Magic Box voice warning.
 
 ## Links & Evidence
+
+- Final 5-minute 44-second challenge demo: https://youtu.be/0V7vHJeHVjs
+- Real-world setup: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_setup.jpg
+- Coffee low-stock result: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_low_stock_alert.jpg
+- RDK X5 Magic Box hardware: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_magicbox_hardware.jpg
 
 - TuntunClaw source and tutorial: https://github.com/datawhalechina/every-embodied/tree/main/16-%E4%B8%93%E9%A2%98%E7%BB%84%E9%98%9F%E5%AD%A6%E4%B9%A0/02-OpenClaw%E5%AE%B6%E5%BA%AD%E7%89%A9%E8%B5%84%E5%8A%A9%E6%89%8B/tuntunclaw
 - Completed MuJoCo simulation demo: https://www.bilibili.com/video/BV1roAVzaEeZ
