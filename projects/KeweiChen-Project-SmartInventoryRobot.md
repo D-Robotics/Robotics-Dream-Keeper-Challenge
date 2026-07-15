@@ -3,7 +3,7 @@
 - **Participant:** Kewei Chen
 - **Stage completed:** 3
 - **Repository:** https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot
-- **Demo video:** https://youtu.be/0V7vHJeHVjs
+- **Demo video:** https://youtu.be/G7VUMQN8TzA
 - **Community post:** https://discord.com/channels/1300358874280230994/1503706103752429618/threads/1506248828523905105
 
 ## Summary
@@ -48,7 +48,7 @@ Magic Box to announce a replenishment warning.
 
 ## Links & Evidence
 
-- Final 5-minute 44-second challenge demo: https://youtu.be/0V7vHJeHVjs
+- Final 5-minute 44-second challenge demo: https://youtu.be/G7VUMQN8TzA
 - Real-world setup: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_setup.jpg
 - Coffee low-stock result: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_low_stock_alert.jpg
 - RDK X5 Magic Box hardware: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_magicbox_hardware.jpg
