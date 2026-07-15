@@ -2,7 +2,7 @@
 
 - **Participant:** Kewei Chen
 - **Stage completed:** 3
-- **Repository:** https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot
+- **Repository:** https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot
 - **Demo video:** https://youtu.be/0V7vHJeHVjs
 - **Community post:** https://discord.com/channels/1300358874280230994/1503706103752429618/threads/1506248828523905105
 
@@ -49,26 +49,26 @@ Magic Box to announce a replenishment warning.
 ## Links & Evidence
 
 - Final 5-minute 44-second challenge demo: https://youtu.be/0V7vHJeHVjs
-- Real-world setup: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_setup.jpg
-- Coffee low-stock result: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_low_stock_alert.jpg
-- RDK X5 Magic Box hardware: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_magicbox_hardware.jpg
+- Real-world setup: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_setup.jpg
+- Coffee low-stock result: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_low_stock_alert.jpg
+- RDK X5 Magic Box hardware: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_magicbox_hardware.jpg
 
 - TuntunClaw source and tutorial: https://github.com/datawhalechina/every-embodied/tree/main/16-%E4%B8%93%E9%A2%98%E7%BB%84%E9%98%9F%E5%AD%A6%E4%B9%A0/02-OpenClaw%E5%AE%B6%E5%BA%AD%E7%89%A9%E8%B5%84%E5%8A%A9%E6%89%8B/tuntunclaw
 - Completed MuJoCo simulation demo: https://www.bilibili.com/video/BV1roAVzaEeZ
 
-- Stage 1 submission package: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/docs/STAGE1_SUBMISSION.md
-- Desktop screenshot: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/assets/stage1_rdk_desktop.png
-- YOLO output image: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/assets/stage1_yolov5_output_image.jpg
-- Microphone recording: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/assets/stage1_magicbox_mic_test.wav
-- Board/network log: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/evidence/stage1_board_network_ssh.txt
-- Static BPU YOLO log: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/evidence/stage1_static_yolov5_bpu_output.txt
-- Live MIPI YOLO log: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/evidence/stage1_live_yolo_mipi_bpu_log.txt
-- ROS detection topic log: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/evidence/stage1_ros_detection_topic.txt
-- Stage 2 design package: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/docs/STAGE2_SUBMISSION.md
-- Stage 3 submission package: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/docs/STAGE3_SUBMISSION.md
-- Stage 3 benchmark: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/docs/BENCHMARK.md
-- Stage 3 BPU evidence: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/evidence/stage3_live_yolo_bpu.txt
-- Stage 3 inventory state: https://github.com/Suibian-YY-pro/rdk-x5-smart-inventory-robot/blob/master/evidence/stage3_inventory_state.json
+- Stage 1 submission package: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/STAGE1_SUBMISSION.md
+- Desktop screenshot: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/stage1_rdk_desktop.png
+- YOLO output image: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/stage1_yolov5_output_image.jpg
+- Microphone recording: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/stage1_magicbox_mic_test.wav
+- Board/network log: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage1_board_network_ssh.txt
+- Static BPU YOLO log: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage1_static_yolov5_bpu_output.txt
+- Live MIPI YOLO log: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage1_live_yolo_mipi_bpu_log.txt
+- ROS detection topic log: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage1_ros_detection_topic.txt
+- Stage 2 design package: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/STAGE2_SUBMISSION.md
+- Stage 3 submission package: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/STAGE3_SUBMISSION.md
+- Stage 3 benchmark: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/BENCHMARK.md
+- Stage 3 BPU evidence: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage3_live_yolo_bpu.txt
+- Stage 3 inventory state: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage3_inventory_state.json
 
 ---
 
