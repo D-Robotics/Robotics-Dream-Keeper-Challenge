@@ -8,68 +8,64 @@
 
 ## Summary
 
-TuntunClaw RDK X5 is a memory-aware household inventory and manipulation
-assistant designed around RDK X5, OpenClaw, and a real robotic arm. The system
-perceives household supplies, maintains quantity and location memory, generates
-low-stock reminders, and coordinates safe manipulation tasks.
+TuntunClaw is a memory-aware household inventory and manipulation assistant.
+The completed system combines RDK X5 BPU perception and Magic Box speech with
+a trained SmolVLA policy, ROKAE xMate ER3 Pro arm, Lebai LMG90 gripper,
+persistent SQLite inventory, a live tablet dashboard, and low-stock voice
+warnings.
 
-The completed TuntunClaw MuJoCo prototype demonstrates natural-language task
-dispatch, VLM + SAM target segmentation, GraspNet grasp-pose inference,
-continuous pick-and-place tasks without scene reset, persistent scene state,
-and inventory updates. The challenge implementation adds the physical Magic
-Box camera, microphone, speaker, RDK X5 BPU perception, and ROS 2 inventory
-state, tablet feedback, and a real robotic arm. The final video visibly
-demonstrates the completed physical inventory task.
+The project team completed SmolVLA fine-tuning and local RTX 3060 deployment.
+During the physical workflow, two live RGB views, current seven-joint state,
+and the natural-language instruction feed SmolVLA. Online model actions pass
+through conservative joint limits and a two-degree per-step safety gate before
+xCoreSDK and Modbus execution. The submitted real-robot policy path does not
+use trajectory replay.
 
-The completed prototype runs a live MIPI-camera YOLO model on the RDK X5 BPU, a CPU microphone activity node, and a ROS 2 inventory tracker. The tracker combines detection and audio activity using ROS receive-time alignment, publishes `/inventory/state`, and persists an atomic JSON snapshot once per second.
+The inventory service commits a delivery only after a model-driven gripper
+close followed by release. It writes SQLite, evaluates `quantity <= threshold`,
+updates the tablet immediately through SSE, and asks the RDK X5 Magic Box to
+announce a warning on a new low-stock transition.
 
-The live benchmark contains 644 consecutive samples. The `yolo26s_bayese_640x640_nv12` model averages 30.02 smart FPS, 24.61 ms BPU inference latency, and 72.27 ms end-to-end pipeline latency at 960 x 544. The start and stop scripts were both verified on the physical board.
+In the demonstrated task, Oreo changes from five to four and remains above its
+threshold of two. Coffee changes from seven to six, reaches its threshold of
+six, and triggers the tablet alert and Magic Box replenishment warning.
 
-In the real-world experiment, the robot retrieves one Oreo cookie and one
-Nestle coffee stick. Oreo inventory changes from 5 to 4 and remains above its
-threshold of 2, so no warning is emitted. Coffee inventory changes from 7 to 6
-and reaches its threshold of 6, causing the tablet to show low stock and the
-Magic Box to announce a replenishment warning.
+The completed MuJoCo system also includes OpenClaw task planning, VLM + SAM
+object understanding, GraspNet grasp-pose inference, continuous pick-and-place
+without scene reset, and persistent object-location and inventory memory.
 
 ## Technical Highlights
 
-- RDK X5 / Magic Box board running Ubuntu 22.04.5 LTS.
-- SSH access, Wi-Fi networking, and XFCE desktop screenshot captured.
-- MIPI camera live stream verified through MagicBox YOLO demo.
-- BPU runtime verified with `BPU Platform Version(1.3.6)` and `DNN Runtime version = 1.24.5`.
-- Static YOLOv5 output image generated with detected `kite` and `person` objects.
-- Live ROS 2 detection topic verified through `/hobot_dnn_detection`.
-- Built-in microphone and speaker devices enumerated; microphone WAV evidence recorded.
-- Concurrent microphone RMS workload publishes `/audio/activity`.
-- Fused inventory state publishes `/inventory/state` and persists to JSON.
-- Reproducible start and PID-scoped safe shutdown scripts verified on the board.
-- Sustained-run temperatures: CPU 58.0 C and DDR 59.4 C.
-- Physical arm retrieval with synchronized tablet inventory feedback and Magic Box voice warning.
+- RDK X5 / Magic Box, Ubuntu 22.04.5, TogetheROS Humble.
+- MIPI-camera `yolo26s_bayese_640x640_nv12` on Bayes BPU.
+- 644-sample benchmark: 30.02 FPS, 24.61 ms BPU inference, 72.27 ms end-to-end.
+- Fine-tuned SmolVLA through LeRobot 0.6.0, deployed on RTX 3060 Laptop GPU.
+- ROKAE xMate ER3 Pro through xCoreSDK Python 0.7.0.
+- Lebai LMG90 through 24 V USB-RS485 / Modbus RTU.
+- SQLite quantities/events, idempotent task completion, REST API and SSE UI.
+- Magic Box `audio_io` TTS for threshold-triggered warnings.
+- Dry-run default, explicit motion confirmation, software bounds and physical emergency stop.
 
-## Links & Evidence
+## Reproducibility and Evidence
 
-- Final 5-minute 44-second challenge demo: https://youtu.be/G7VUMQN8TzA
-- Real-world setup: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_setup.jpg
-- Coffee low-stock result: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_low_stock_alert.jpg
-- RDK X5 Magic Box hardware: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_magicbox_hardware.jpg
+- [Quick Start and project map](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot)
+- [Stage 2 engineering package](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/STAGE2_SUBMISSION.md)
+- [Stage 3 final package](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/STAGE3_SUBMISSION.md)
+- [Implemented architecture, interfaces and rates](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/ARCHITECTURE.md)
+- [Stage 2 to Stage 3 traceability](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/TRACEABILITY.md)
+- [Final BOM and safety limits](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/hardware/BOM.md)
+- [SmolVLA training and deployment](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/tree/master/smolvla)
+- [Inventory, tablet and voice implementation](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/tree/master/inventory_web)
+- [RDK benchmark](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/BENCHMARK.md)
+- [Raw BPU evidence](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage3_live_yolo_bpu.txt)
+- [Physical setup](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_setup.jpg)
+- [Coffee low-stock result](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_low_stock_alert.jpg)
 
-- TuntunClaw source and tutorial: https://github.com/datawhalechina/every-embodied/tree/main/16-%E4%B8%93%E9%A2%98%E7%BB%84%E9%98%9F%E5%AD%A6%E4%B9%A0/02-OpenClaw%E5%AE%B6%E5%BA%AD%E7%89%A9%E8%B5%84%E5%8A%A9%E6%89%8B/tuntunclaw
-- Completed MuJoCo simulation demo: https://www.bilibili.com/video/BV1roAVzaEeZ
-
-- Stage 1 submission package: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/STAGE1_SUBMISSION.md
-- Desktop screenshot: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/stage1_rdk_desktop.png
-- YOLO output image: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/stage1_yolov5_output_image.jpg
-- Microphone recording: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/stage1_magicbox_mic_test.wav
-- Board/network log: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage1_board_network_ssh.txt
-- Static BPU YOLO log: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage1_static_yolov5_bpu_output.txt
-- Live MIPI YOLO log: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage1_live_yolo_mipi_bpu_log.txt
-- ROS detection topic log: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage1_ros_detection_topic.txt
-- Stage 2 design package: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/STAGE2_SUBMISSION.md
-- Stage 3 submission package: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/STAGE3_SUBMISSION.md
-- Stage 3 benchmark: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/BENCHMARK.md
-- Stage 3 BPU evidence: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage3_live_yolo_bpu.txt
-- Stage 3 inventory state: https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage3_inventory_state.json
+Checkpoint weights, training recordings, and the proprietary ROKAE SDK/license
+are external artifacts. Their public conversion, training, configuration and
+runtime interfaces are provided in the project repository.
 
 ---
 
-I agree that this showcase document may be used by the Robotics Dream Keeper Challenge organizers as described in the official README (promotion, judging, and archives).
+I agree that this showcase document may be used by the Robotics Dream Keeper
+Challenge organizers as described in the official README.
