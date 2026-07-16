@@ -14,9 +14,13 @@ a trained SmolVLA policy, ROKAE xMate ER3 Pro arm, Lebai LMG90 gripper,
 persistent SQLite inventory, a live tablet dashboard, and low-stock voice
 warnings.
 
-The project team completed SmolVLA fine-tuning and deployment on an NVIDIA RTX PRO 6000 96 GB GPU.
+The project team completed SmolVLA fine-tuning and deployment on an NVIDIA RTX
+PRO 6000 Blackwell Server Edition 96 GB GPU. The public reproduction environment
+uses Python 3.12, LeRobot 0.6.0, and PyTorch 2.7.1 with the CUDA 12.8 wheel.
 During the physical workflow, two live RGB views, current seven-joint state,
-and the natural-language instruction feed SmolVLA. Online model actions pass
+and an item-specific Oreo or coffee instruction feed SmolVLA. The policy queue
+is reset for each new observation and only the first newly inferred action is
+executed. Online model actions pass
 through conservative joint limits and a two-degree per-step safety gate before
 xCoreSDK and Modbus execution. The submitted real-robot policy path does not
 use trajectory replay.
@@ -26,7 +30,13 @@ The RDK fixed camera then confirms a stable increase in delivery-tray occupancy
 across multiple frames before the inventory service commits one unit. It writes
 SQLite, evaluates `quantity <= threshold`, updates the tablet immediately
 through SSE, and asks the RDK X5 Magic Box to announce a warning on a new
-low-stock transition. An empty grasp therefore cannot decrement inventory.
+low-stock transition. The LMG90 position and done registers are checked before
+the candidate is reported. An empty grasp therefore cannot decrement inventory.
+
+The submitted physical run is deliberately started by the operator with the
+requested item ID. RDK YOLO and microphone topics run as parallel edge-AI
+demonstrations; the public repository does not claim an autonomous
+speech-to-arm trigger.
 
 In the demonstrated task, Oreo changes from five to four and remains above its
 threshold of two. Coffee changes from seven to six, reaches its threshold of
@@ -41,9 +51,9 @@ without scene reset, and persistent object-location and inventory memory.
 - RDK X5 / Magic Box, Ubuntu 22.04.5, TogetheROS Humble.
 - MIPI-camera `yolo26s_bayese_640x640_nv12` on Bayes BPU.
 - 644-sample benchmark: 30.02 FPS, 24.61 ms BPU inference, 72.27 ms end-to-end.
-- Fine-tuned SmolVLA through LeRobot 0.6.0, deployed on NVIDIA RTX PRO 6000 96 GB.
+- Fine-tuned SmolVLA through LeRobot 0.6.0 / PyTorch 2.7.1 cu128, deployed on NVIDIA RTX PRO 6000 Blackwell Server Edition 96 GB.
 - ROKAE xMate ER3 Pro through xCoreSDK Python 0.7.0.
-- Lebai LMG90 through 24 V USB-RS485 / Modbus RTU.
+- Lebai LMG90 through 24 V USB-RS485 / Modbus RTU with actual-position and completion feedback.
 - SQLite quantities/events, idempotent visually verified tasks, REST API and SSE UI.
 - Magic Box `audio_io` TTS for threshold-triggered warnings.
 - Dry-run default, explicit motion confirmation, software bounds and physical emergency stop.
