@@ -61,6 +61,7 @@ without scene reset, and persistent object-location and inventory memory.
 - [RDK delivery visual confirmation](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/VISUAL_CONFIRMATION.md)
 - [RDK benchmark](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/docs/BENCHMARK.md)
 - [Raw BPU evidence](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage3_live_yolo_bpu.txt)
+- [Live RDK empty-grasp rejection and delivery confirmation](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/evidence/stage3_rdk_roi_verifier.txt)
 - [Physical setup](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_setup.jpg)
 - [Coffee low-stock result](https://github.com/Ethan-Chen-plus/rdk-x5-smart-inventory-robot/blob/master/assets/realworld_low_stock_alert.jpg)
 
