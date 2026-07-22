@@ -1,4 +1,4 @@
-# RDK X5 Tri-Cam NavBot — Encoderless Indoor Navigation with Kidnap Recovery
+# RDK X5 Tri-Cam NavBot — Encoderless Indoor Navigation
 
 - **Participant:** Muhirwa Richard (GitHub: [@MuhirwaRichard1](https://github.com/MuhirwaRichard1))
 - **Stage completed:** 3
@@ -6,7 +6,6 @@
 - **Demo video:** https://youtu.be/Z3CnLehWs7o
 - **Extended demo (operator-console POV):** https://youtu.be/6Rp8K-f7oq8
 - **Live AI inference demo:** https://youtu.be/p5Sa7evwUvI
-- **Community post:** <!-- TODO: paste your Discord/forum permalink here -->
 - **License:** MIT
 
 ---
@@ -36,8 +35,7 @@ speaks WebSocket for control and a UDP fast path for video and teleop, with
 live camera feeds, an obstacle-sector HUD, map view with click-to-set-goal, and
 a hardware-independent E-stop.
 
-Stage 3 delivers the full mission end to end: **map → save → navigate to goal →
-survive a kidnap → arrive.**
+Stage 3 delivers the full mission end to end: **map → save → navigate to goal → arrive.**
 
 ---
 
@@ -147,13 +145,9 @@ models compiled with the RDK toolchain.
 | Workload | Device | Input | Inference | Pipeline rate |
 |---|---|---|---|---|
 | Depth Anything V2 ViT-S | **BPU** | 392×392 NV12 | ~350 ms/frame | **~2.8 FPS** |
-| Depth Anything V2 ViT-S (opt2 variant) | **BPU** | — | — | ~1.2 FPS |
 | YOLO11m detect (bayese) | **BPU** | 640×640 NV12 | **~52 ms/frame** | ~10 FPS in the avoidance loop |
 | PIDNet-S segmentation | **BPU** | 576×768 | **~9 ms/frame** | ~15 Hz loop |
-| PIDNet + YOLO fused avoidance | **BPU** (both) | — | — | ~7.5 Hz |
-| `imu_driver` (MPU6050) | CPU | — | — | **~190 Hz** |
 | `scan_sectors` (RPLidar C1) | CPU | 16 m / 360° | — | 10 Hz |
-| `ekf_filter_node` | CPU | — | — | 30 Hz |
 
 <!-- TODO: run one `hrut_somstatus` capture and one `top` capture during a
      navigate run with both BPU models enabled, and paste the BPU utilisation
