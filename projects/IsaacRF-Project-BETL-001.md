@@ -1,59 +1,84 @@
-# BETL-001 — BPU Education Transport & Lidar Robot
+# BETL-001
 
 - **Participant:** IsaacRF
-- **Stage completed:** 2
+- **Stage completed:** 3
 - **Repository:** https://github.com/RFisaac/BETL-001
+- **Demo video:** https://youtu.be/_VSdEOZrcUg
 - **Community post:** https://discord.com/channels/1300358874280230994/1509220927462969575/1514489192158330931
 
 ## Summary
 
 BETL-001 ("BPU-Education, Transport, Lidar" — pronounced "Beetle") is my scratch-built,
-bio-inspired expressive lidar mobile robot on the D-Robotics RDK X5: a modular research
-platform with personality baked in from the start. The long-term goal is an educational
-transport robot combining BPU-accelerated vision with lidar-based navigation.
+bio-inspired expressive lidar mobile robot on the D-Robotics RDK X5. For Stage 3, it drives
+under Steam Deck teleop, runs YOLOv8n object detection on the BPU concurrently with a
+CPU-side dead-reckoning and lidar-reprojection pipeline, and builds a 3D point cloud from a
+single 2D RPLIDAR A1 canted 90° on an encoder-driven rotating stage — a "poor-man's
+spherical scanner" reprojected through the live TF chain.
 
-**Stage 1 (Ignite) — brain online.** Starting from first contact with the board, I flashed a
-supported OS image with RDK Studio, brought up Wi-Fi with verified public DNS resolution, and
-established SSH for remote development. For sensor bring-up I went beyond a basic camera
-preview: using the D-Robotics GS130W MIPI stereo camera I ran on-device stereo depth
-(DStereoV2.4, BPU-accelerated) at ~14.6 fps, and ran YOLOv8n object detection on the X5's BPU
-via ROS 2 with annotated output (person detection in my workshop). I documented a real
-integration quirk: the GS130W mounts rotated 90 degrees and only that orientation has valid GDC
-rectification, so the depth preview renders upside-down — cosmetic only, the fix is mount
-design, not software rotation.
+The two required concurrent workloads run on physically separate compute: **YOLOv8n INT8 on
+the BPU** and **wheel+gyro odometry plus lidar-cloud accumulation on the CPU**. Measured
+benchmark: BPU inference held at 7.25 ms mean isolated vs. 7.47 ms mean under concurrent
+CPU load — a 3% delta — while CPU-side pipeline stages degraded 19–39% over the same run,
+which is the concurrent-workload story in one number.
 
-**Stage 2 (Build) — full robot architecture.** Stage 2 moves BETL-001 from running demos to a
-complete design: a 4-wheel skid-steer base on hoverboard hub motors driven by four ODESC
-controllers over the X5's native CAN FD bus, with the two required concurrent workloads being
-YOLOv8s detection on the BPU and slam_toolbox 2D SLAM on the CPU — separate compute units.
-Forward depth fuses the D-Robotics stereo camera with a RealSense D435i so their failure modes
-cancel; an optional "poor-man's spherical lidar" payload spins an RPLIDAR A1 on a
-closed-loop-stepper slip-ring stage and encoder-reprojects it to a 3D cloud. The architecture
-rests on a baseline sensor tier as a hard safety contract plus software-declared optional
-payloads, and a single arbitrated path to the motors with soft + hardware e-stop.
+I'm being explicit that pose comes from **wheel+gyro dead reckoning, not SLAM**: RTAB-Map
+was the original plan, but enabling RealSense depth for it pushed the board to a 16.4 load
+average and broke everything downstream, so it was pulled from the live chain in favor of a
+simpler, working dead-reckoning pipeline. RTAB-Map's CPU cost is still what the concurrent
+benchmark load represents. Safety is a single arbitrated path to the four drive motors —
+Deck deadman, command watchdog, a software e-stop topic, the ODrive firmware watchdog, and
+an independent hardware e-stop, in that order.
+
+This submission is going up after the stated Stage 3 window closed — the honest status is
+in the repo, not smoothed over here.
 
 ## Technical Highlights
 
-**Stage 1 (demonstrated on hardware)**
-- **Platform:** RDK X5 (Ubuntu 22.04.5, ROS 2 Humble / tros.b), flashed via RDK Studio; Wi-Fi + SSH workflow
-- **Sensor:** D-Robotics GS130W MIPI stereo (dual SC132GS global-shutter, MIPI CSI, I2C 0x32/0x33)
-- **Depth:** DStereoV2.4_int16 (IGEV-based) on the BPU — ~14.6 fps at ~95-100% BPU utilization
-- **AI task:** YOLOv8n (640x640 NV12, stock .bin) on the BPU via dnn_node_example, fed from the stereo left eye
-
-**Stage 2 (designed architecture)**
-- **Concurrent workloads:** YOLOv8s INT8 640x640 on the **BPU** (target >=30 FPS) + slam_toolbox 2D SLAM on the **CPU** — separate units
-- **Drivetrain:** 4-wheel skid steer, hoverboard hub motors, 4x Flipsky ODESC V4.2 on the X5's **native CAN FD** bus; AS5600 wheel odometry
-- **Sensing:** D-Robotics stereo + RealSense D435i (active-IR + base IMU), fused; 2x side 8x8 ToF (VL53L7CX); optional spinning-lidar payload via M6 cheese plate
-- **Architecture:** baseline-vs-optional capability tiers (software-declared); single cmd_mux path to motors with soft + hardware e-stop
-- **Microcontrollers:** RP2350/Pico 2 class (stage, odometry, power, load cell, LED) over micro-ROS
-- **On-robot learning (goals):** mass-conditioned energy-efficient locomotion + goal-conditioned Y-horn ball-pushing, trained in Isaac Lab with roller-dyno sim-to-real calibration
+- **Board:** RDK X5, Ubuntu 22.04 / ROS 2 Humble (tros.b)
+- **AI:** YOLOv8n INT8, 640×640, on the BPU via `dnn_node_example`, fed from RealSense RGB
+- **Concurrent workloads:** BPU detection + CPU dead-reckoning/lidar-reprojection, on
+  separate compute units (see Architecture below)
+- **Drivetrain:** 4-wheel skid steer, 4× Flipsky ODESC V4.2 (USB), closed-loop velocity
+  control only, wheel-speed clamp applied proportionally across both sides
+- **Odometry:** ODESC wheel encoders (forward velocity) + RealSense D435i gyro (yaw rate),
+  fused with a zero-velocity-update bias tracker — dead reckoning, no loop closure
+- **Lidar:** RPLIDAR A1 canted 90° on a stepper-driven rotating stage, reprojected to 3D
+  via a single TF lookup per scan segment
+- **Safety:** hardware e-stop + software `/estop` + Deck deadman + command watchdog + ODrive
+  firmware watchdog, single arbitrated path to the motors
+- **Bring-up:** gated supervisor (`beetle_up.py`) that verifies each stage before starting
+  the next, rather than a fixed-delay launch file
+- **Benchmark:** BPU inference 7.25 ms mean isolated → 7.47 ms mean concurrent (+3%); CPU
+  pipeline stages −19% to −39% over the same run
 
 ## Links & Evidence
 
-- **Stage 2 proposal** (Challenges 1-3, diagrams, BOM, risks): https://github.com/RFisaac/BETL-001/blob/main/PROPOSAL.md
-- **Roadmap** (milestones through July 15): https://github.com/RFisaac/BETL-001/blob/main/ROADMAP.md
-- **Stage 1 screenshots:** https://github.com/RFisaac/BETL-001/tree/main/media/stage1
+- **Architecture, TF chain, node graph:** https://github.com/RFisaac/BETL-001/blob/main/docs/architecture.md
+- **Measured calibration constants:** https://github.com/RFisaac/BETL-001/blob/main/docs/calibration.md
+- **Benchmark methodology + tables:** https://github.com/RFisaac/BETL-001/blob/main/docs/benchmark.md
+- **Known issues / failure recovery:** https://github.com/RFisaac/BETL-001/blob/main/docs/failure-recovery.md
+- **Stage 2 proposal (Challenges 1–3, diagrams, BOM, risks):** https://github.com/RFisaac/BETL-001/blob/main/PROPOSAL.md
 - **Stage 1 documentation:** https://github.com/RFisaac/BETL-001#stage-1--ignite-challenge
+
+## Benchmark table
+
+| Metric | Isolated | Concurrent | Δ |
+|---|---|---|---|
+| BPU inference (`predict_infer`), mean | 7.25 ms | 7.47 ms | +3.0% |
+| `preprocess` (CPU), mean | 8.85 ms | 12.29 ms | +38.9% |
+| `postprocess` (CPU), mean | 4.21 ms | 5.03 ms | +19.5% |
+| Node-reported FPS, mean | 23.3 | 18.18 | −22.0% |
+
+Model: YOLOv8n INT8, 640×640. Concurrent load: `rtabmap_ros` (installed, not driving the
+live map — see `docs/architecture.md` for why). BPU utilization independently confirmed via
+a 120-sample `hrut_somstatus` trace, `bpu0` steady in a 4–8% band throughout. Raw evidence
+(`bench/*.json`, `logs/bpu_proof.log`, `logs/versions.txt`) is committed in the repo. Full
+per-stage p95/median/min/max and the reproduction script:
+[`docs/benchmark.md`](https://github.com/RFisaac/BETL-001/blob/main/docs/benchmark.md).
+
+## License
+
+Apache License 2.0.
 
 ---
 
