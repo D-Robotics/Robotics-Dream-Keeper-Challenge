@@ -12,7 +12,7 @@
 
 ## 2026 Summer Project Showcase
 
-The 2026 Summer Challenge brought together 11 projects built on the RDK X5. This showcase recognizes the three **TOP Creator Award** recipients and documents every participant submission, with direct links to source code, demonstrations, and technical materials.
+The 2026 Summer Challenge featured 11 RDK X5 projects spanning autonomous navigation, computer vision, voice interaction, robotic manipulation, smart environments, and edge-AI applications. The three projects highlighted below received the **TOP Creator Award**.
 
 <table>
   <tr>
@@ -42,9 +42,7 @@ The 2026 Summer Challenge brought together 11 projects built on the RDK X5. This
 
 <div align="center">
 
-### [Explore the 2026 Summer project wall →](./SHOWCASE.md)
-
-*11 creator projects · source repositories · demo videos · technical documentation*
+### [Explore the 2026 Summer project wall](./SHOWCASE.md)
 
 </div>
 
