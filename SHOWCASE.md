@@ -114,15 +114,3 @@ Together with the TOP 3 above, these eight projects complete the 2026 project wa
     </td>
   </tr>
 </table>
-
----
-
-<div align="center">
-
-### Built on D-Robotics RDK X5
-
-Every profile remains linked to the creator's own repository, where source code stays under the creator's chosen license.
-
-[Back to challenge home](./README.md) · [How projects were submitted](./projects/README.md) · [Awards and recognition](./awards.md)
-
-</div>
