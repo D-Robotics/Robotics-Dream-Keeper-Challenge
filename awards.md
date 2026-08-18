@@ -73,6 +73,16 @@ Selected from finishers who complete all stages (3 winners).
   - **Global Developer Interview** and feature spotlight.
   - **Official Collaboration** opportunities for content, hardware, or joint demos.
 
+#### 2026 TOP Creator Award Recipients
+
+| Creator | Award-winning project | Explore |
+|:---|:---|:---|
+| **Muhirwa Richard** | **RDK X5 Tri-Cam NavBot** | [Project profile](./projects/MuhirwaRichard-Project-TriCamNavBot.md) · [Source](https://github.com/MuhirwaRichard1/RDK-X5-Second-Stage-) · [Demo](https://youtu.be/Z3CnLehWs7o) |
+| **IsaacRF** | **BETL-001** | [Project profile](./projects/IsaacRF-Project-BETL-001.md) · [Source](https://github.com/RFisaac/BETL-001) · [Demo](https://youtu.be/_VSdEOZrcUg) |
+| **Kazuki Murata** | **Korosuke (コロ助)** | [Project profile](./projects/KazukiMurata-Project-Korosuke.md) · [Source](https://github.com/gurimaruking/corosuke-robot) · [Demo](https://youtu.be/NJwj6Iazd20) |
+
+See the **[2026 Final Project Wall](./SHOWCASE.md)** for all creator projects.
+
 ---
 
 ## Eligibility & Fair Play

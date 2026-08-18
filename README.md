@@ -10,6 +10,46 @@
 
 ---
 
+## 2026 Final Project Showcase
+
+The robots are built, the demos are live, and the **TOP 3 Creators** have been selected. Explore the complete project wall to meet all 11 creators and find their source code, demos, technical documentation, and challenge submissions.
+
+<table>
+  <tr>
+    <td align="center" width="33%">
+      <a href="./projects/MuhirwaRichard-Project-TriCamNavBot.md"><img src="https://img.youtube.com/vi/Z3CnLehWs7o/hqdefault.jpg" width="100%" alt="RDK X5 Tri-Cam NavBot" /></a><br />
+      <strong>🏆 TOP CREATOR</strong><br />
+      <strong>Tri-Cam NavBot</strong><br />
+      <sub>Muhirwa Richard · Encoderless indoor navigation</sub><br /><br />
+      <a href="./projects/MuhirwaRichard-Project-TriCamNavBot.md">Project</a> · <a href="https://github.com/MuhirwaRichard1/RDK-X5-Second-Stage-">Code</a> · <a href="https://youtu.be/Z3CnLehWs7o">Demo</a>
+    </td>
+    <td align="center" width="33%">
+      <a href="./projects/IsaacRF-Project-BETL-001.md"><img src="https://img.youtube.com/vi/_VSdEOZrcUg/hqdefault.jpg" width="100%" alt="BETL-001" /></a><br />
+      <strong>🏆 TOP CREATOR</strong><br />
+      <strong>BETL-001</strong><br />
+      <sub>IsaacRF · Expressive lidar mobile robot</sub><br /><br />
+      <a href="./projects/IsaacRF-Project-BETL-001.md">Project</a> · <a href="https://github.com/RFisaac/BETL-001">Code</a> · <a href="https://youtu.be/_VSdEOZrcUg">Demo</a>
+    </td>
+    <td align="center" width="33%">
+      <a href="./projects/KazukiMurata-Project-Korosuke.md"><img src="https://img.youtube.com/vi/NJwj6Iazd20/hqdefault.jpg" width="100%" alt="Korosuke animatronic AI robot" /></a><br />
+      <strong>🏆 TOP CREATOR</strong><br />
+      <strong>Korosuke (コロ助)</strong><br />
+      <sub>Kazuki Murata · Animatronic AI robot</sub><br /><br />
+      <a href="./projects/KazukiMurata-Project-Korosuke.md">Project</a> · <a href="https://github.com/gurimaruking/corosuke-robot">Code</a> · <a href="https://youtu.be/NJwj6Iazd20">Demo</a>
+    </td>
+  </tr>
+</table>
+
+<div align="center">
+
+### [Explore the complete 2026 project wall →](./SHOWCASE.md)
+
+*11 creator projects · source repositories · demo videos · technical documentation*
+
+</div>
+
+---
+
 ## Overview
 
 The **Robotics Dream Keeper Challenge** is a **staged, hands-on robotics program** built around real hardware and production-style delivery. Participants progress from first boot on **D-Robotics RDK X5** to a **complete, demo-ready AI / robotics project** with ROS 2 integration, accelerated inference, and community visibility.
@@ -168,6 +208,7 @@ Sign up for the challenge now to unlock a **FREE 1‑month learning license**!
 ```
 Robotics-Dream-Keeper-Challenge/
 ├── README.md
+├── SHOWCASE.md
 ├── awards.md
 ├── stages/
 ├── docs/
