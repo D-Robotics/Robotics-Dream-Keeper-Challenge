@@ -81,7 +81,7 @@ Selected from finishers who complete all stages (3 winners).
 | **IsaacRF** | **BETL-001** | [Project profile](./projects/IsaacRF-Project-BETL-001.md) · [Source](https://github.com/RFisaac/BETL-001) · [Demo](https://youtu.be/_VSdEOZrcUg) |
 | **Kazuki Murata** | **Korosuke (コロ助)** | [Project profile](./projects/KazukiMurata-Project-Korosuke.md) · [Source](https://github.com/gurimaruking/corosuke-robot) · [Demo](https://youtu.be/NJwj6Iazd20) |
 
-See the **[2026 Final Project Wall](./SHOWCASE.md)** for all creator projects.
+See the **[2026 Summer Project Wall](./SHOWCASE.md)** for all creator projects.
 
 ---
 

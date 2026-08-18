@@ -2,11 +2,11 @@
 
 # Robotics Dream Keeper Challenge
 
-## 2026 Final Project Wall
+## 2026 Summer Project Wall
 
-**11 creators turned the RDK X5 into robots that navigate, perceive, speak, manipulate, patrol, teach, clean, and create.**
+**The 2026 Summer showcase documents 11 RDK X5 projects spanning navigation, perception, speech, manipulation, patrol, education, cleaning, and design.**
 
-[TOP 3 Creators](#top-3-creators) · [More Creator Projects](#more-creator-projects) · [Challenge Home](./README.md)
+[TOP 3 Creators](#top-3-creators) · [Project Showcase](#project-showcase) · [Challenge Home](./README.md)
 
 </div>
 
@@ -14,7 +14,7 @@
 
 ## TOP 3 Creators
 
-Three standout projects were recognized for delivery completeness, technical depth, innovation, and ecosystem impact.
+The 2026 TOP Creator Award recognized three projects for delivery completeness, technical depth, innovation, and contribution to the RDK ecosystem.
 
 <table>
   <tr>
@@ -44,9 +44,9 @@ Three standout projects were recognized for delivery completeness, technical dep
 
 ---
 
-## More Creator Projects
+## Project Showcase
 
-Together with the TOP 3 above, these eight projects complete the 2026 project wall. Open any profile for the full story, benchmarks, architecture, evidence, and community links supplied by its creator.
+The remaining eight submissions reflect the range of the 2026 Summer cohort, from autonomous patrol and robotic manipulation to smart classrooms and edge-AI tools. Each entry links to the creator's repository and, where available, demo footage, benchmarks, architecture notes, and supporting evidence.
 
 <table>
   <tr>

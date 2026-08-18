@@ -1,6 +1,6 @@
 # Participant Project Showcase
 
-> Looking for the finished projects? Visit the **[2026 Final Project Wall](../SHOWCASE.md)** for the complete visual gallery, including the TOP 3 Creators, source repositories, demos, and technical profiles.
+> Looking for the finished projects? Visit the **[2026 Summer Project Wall](../SHOWCASE.md)** for the complete visual gallery, including the TOP 3 Creators, source repositories, demos, and technical profiles.
 
 This directory collects **one Markdown file per participant project** submitted via **Pull Request**. Engineers review these files before merge.
 

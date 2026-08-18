@@ -10,9 +10,9 @@
 
 ---
 
-## 2026 Final Project Showcase
+## 2026 Summer Project Showcase
 
-The robots are built, the demos are live, and the **TOP 3 Creators** have been selected. Explore the complete project wall to meet all 11 creators and find their source code, demos, technical documentation, and challenge submissions.
+The 2026 Summer Challenge brought together 11 projects built on the RDK X5. This showcase recognizes the three **TOP Creator Award** recipients and documents every participant submission, with direct links to source code, demonstrations, and technical materials.
 
 <table>
   <tr>
@@ -42,7 +42,7 @@ The robots are built, the demos are live, and the **TOP 3 Creators** have been s
 
 <div align="center">
 
-### [Explore the complete 2026 project wall →](./SHOWCASE.md)
+### [Explore the 2026 Summer project wall →](./SHOWCASE.md)
 
 *11 creator projects · source repositories · demo videos · technical documentation*
 
