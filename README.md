@@ -1,12 +1,16 @@
 <div align="center">
 
-# **Robotics Dream Keeper Challenge**
+# **RDK Challenge 2026 Summer**
 
-<img src="./assets/poster.png" alt="Robotics Dream Keeper Challenge Poster" width="720"/>
+<img src="./assets/poster.png" alt="RDK Challenge 2026 Summer Poster" width="720"/>
 
 **Power on. Build. Launch your intelligent robot on RDK X5.**
 
 </div>
+
+---
+
+> The challenge continues this winter. Visit **[RDK Challenge 2026 Winter](https://github.com/D-Robotics/Robotics-Dream-Keeper-Challenge-Winter)** for the new schedule, registration, and stage requirements.
 
 ---
 
